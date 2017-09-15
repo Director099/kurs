@@ -1,0 +1,19 @@
+body {
+  font: 300 14px "Roboto", "Arial", sans-serif;
+  color: #4d4a40;
+}
+.main-header {
+  height: 100vh;
+  background: #ecebeb url("img/desk-bottom.png") no-repeat bottom;
+  background-size: contain;
+}
+.btn {
+  background: #00b9c6;
+  color: #fff;
+}
+.greed-between {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}

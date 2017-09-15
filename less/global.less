@@ -9,7 +9,22 @@ body {
 	background-size: contain;
 }
 
+.title-name {
+	font: 36px "Roboto", "Arial", sans-serif;
+	span {
+		text-transform: uppercase;
+		color: @main-color;
+	}
+}
+
 .btn {
 	background: @main-color;
 	color: @white;
+	padding: 3.5px 35px;
+}
+
+@media (min-width: 1310px) {
+	.container-set-lg {
+    	max-width: 1310px;
+    }
 }

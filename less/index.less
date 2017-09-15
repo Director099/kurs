@@ -1,4 +1,31 @@
 .greed-between {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	margin: 0 -15px;
+}
+
+.main-text {
+	max-width: 656px;
+	.title-name {
+		margin-bottom: 0;
+	}
+	p {
+		font-size: 36px;
+		margin: 0;
+		span {
+			text-transform: uppercase;
+			&.color {
+				color: @main-color;
+			}
+		}
+	}
+}
+
+.form-communication {
+	max-width: 468px;
+	width: 100%;
+	padding: 20px;
+	background: @white;
+	margin-left: auto;
 }
