@@ -1,6 +1,6 @@
 body {
 	font: 300 14px "Roboto", "Arial", sans-serif;
-	color: #4d4a40;
+	color: @body-color;
 }
 
 .main-header {
@@ -15,12 +15,26 @@ body {
 		text-transform: uppercase;
 		color: @main-color;
 	}
+	&.title-name_affermation {
+		text-align: center;
+		padding: 35px 0;
+	}
+	&.title-name_right {
+		text-align: right;
+	}
 }
 
 .btn {
 	background: @main-color;
 	color: @white;
-	padding: 3.5px 35px;
+	padding: 3.5px 0px;
+	max-width: 174px;
+	width: 100%;
+	cursor: pointer;
+	&:hover {
+		color: @white;
+		background: #0698a2;
+	}
 }
 
 @media (min-width: 1310px) {
