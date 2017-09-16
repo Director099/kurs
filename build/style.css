@@ -14,10 +14,30 @@ body {
   text-transform: uppercase;
   color: #00b9c6;
 }
+.title-name.title-name_affermation {
+  text-align: center;
+  padding: 35px 0;
+}
+.title-name.title-name_right {
+  text-align: right;
+}
 .btn {
   background: #00b9c6;
   color: #fff;
-  padding: 3.5px 35px;
+  padding: 3.5px 0px;
+  max-width: 174px;
+  width: 100%;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #fff;
+  background: #0698a2;
+}
+.transition {
+  transition: 250ms;
+}
+.modal-content .modal-title {
+  width: 100%;
 }
 .greed-between {
   display: -ms-flexbox;
@@ -26,7 +46,6 @@ body {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
-  margin: 0 -15px;
 }
 .main-text {
   max-width: 656px;
@@ -37,6 +56,7 @@ body {
 .main-text p {
   font-size: 36px;
   margin: 0;
+  font-weight: 400;
 }
 .main-text p span {
   text-transform: uppercase;
@@ -44,15 +64,285 @@ body {
 .main-text p span.color {
   color: #00b9c6;
 }
+.navbar-set {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 25px 0;
+}
+.navbar-set .navbar-collapse {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+}
+.navbar-set .navbar-toggler {
+  padding: 9px 10px;
+  cursor: pointer;
+  border: 1px solid;
+  background: transparent;
+}
+.navbar-set .navbar-toggler .icon-bar {
+  background: #000;
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-top: 4px;
+  border-radius: 1px;
+}
+.navbar-set .navbar-toggler .icon-bar:first-child {
+  margin-top: 0;
+}
+.navigation-list li {
+  padding: 10px;
+}
+.navigation-list li a {
+  text-transform: uppercase;
+  color: #4d4a40;
+  transition: 250ms;
+}
+.navigation-list li a:hover {
+  text-decoration: none;
+  color: #00b9c6;
+}
+.block-fix_center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  min-height: calc(100vh - 200px);
+}
 .form-communication {
   max-width: 468px;
   width: 100%;
-  padding: 20px;
+  padding: 25px;
   background: #fff;
   margin-left: auto;
+  border-radius: 5px;
+}
+.form-communication .form-title {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.form-communication .form-control {
+  padding: 14px 10px;
+}
+.form-communication .form-check {
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0;
+}
+.form-communication .btn {
+  display: block;
+  margin: 0 auto;
+}
+.block-quest {
+  padding-top: 100px;
+}
+.block-quest .title-name {
+  padding-top: 30px;
+}
+.block-quest .change {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center;
+  margin: 30px 0;
+  min-height: 184px;
+}
+.block-quest .change .text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-size: 18px;
+}
+.block-quest .change .text span {
+  color: #00b9c6;
+  text-transform: uppercase;
+}
+.block-quest .change .circle {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 1px solid;
+  border-radius: 50%;
+}
+.block-quest .change .circle p {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  font-size: 18px;
+  margin: 0;
+}
+.block-quest .change .circle span {
+  font-size: 48px;
+}
+.block-quest .change .circle span.sign {
+  font-size: 78px;
+}
+.programm {
+  background: url("img/fon-2.jpg") no-repeat;
+  background-size: cover;
+  padding: 60px 0;
+}
+.programm .title-name {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.programm .title-name .color {
+  text-transform: capitalize;
+}
+.programm .course {
+  background: #fff;
+  margin-bottom: 15px;
+}
+.programm .course .img-fluid {
+  width: 100%;
+}
+.programm .course .name-course {
+  font-size: 24px;
+  padding: 10px 30px;
+}
+.programm .course .list-course {
+  padding-left: 48px;
+  margin: 0;
+}
+.programm .course .list-course li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.programm .course .btn {
+  margin: 10px 30px;
+}
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 350px;
+    margin: 30px auto;
+  }
 }
 @media (min-width: 1310px) {
   .container-set-lg {
     max-width: 1310px;
+  }
+}
+@media (max-width: 1309px) {
+  .form-communication {
+    max-width: 368px;
+  }
+  .center-block {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 1199px) {
+  .main-text {
+    max-width: 540px;
+  }
+}
+@media (max-width: 991px) {
+  .navbar-set {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .navbar-set .navbar-collapse {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+  }
+  .navbar-set .navbar-collapse .navigation-list {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 15px;
+  }
+  .navbar-set .navbar-collapse .navigation-list li:first-child {
+    padding-left: 0;
+  }
+  .navbar-set .navbar-collapse .navigation-list li:last-child {
+    padding-right: 0;
+  }
+  .greed-between {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+  }
+  .greed-between .main-text {
+    max-width: 100%;
+  }
+  .greed-between .form-communication {
+    margin-top: 20px;
+    margin-right: auto;
+  }
+  .block-quest {
+    padding-top: 40px;
+  }
+  .block-quest .title-name {
+    padding-top: 0;
+    text-align: center;
+  }
+  .block-quest .change {
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    margin: 30px 0;
+    min-height: inherit;
+  }
+  .block-quest .change .circle {
+    width: 120px;
+    height: 120px;
+  }
+  .block-quest .change .text {
+    font-size: 14px;
+  }
+  .block-quest .center-block {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .main-header {
+    height: inherit;
+  }
+  .navbar-set .navbar-collapse .navigation-list {
+    text-align: center;
+  }
+  .navbar-set .navbar-collapse .navigation-list li:first-child {
+    padding-left: 10px;
+  }
+  .navbar-set .navbar-collapse .navigation-list li:last-child {
+    padding-right: 10px;
+  }
+  .greed-between {
+    margin-bottom: 20px;
+  }
+  .main-text .title-name {
+    font-size: 28px;
+  }
+  .main-text p {
+    font-size: 28px;
+  }
+}
+@media (max-width: 575px) {
+  .navbar-set .btn {
+    display: none;
   }
 }
