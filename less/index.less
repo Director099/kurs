@@ -1,8 +1,13 @@
+.modal-content {
+	.modal-title {
+		width: 100%;
+	}
+}
+
 .greed-between {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin: 0 -15px;
 }
 
 .main-text {
@@ -13,6 +18,7 @@
 	p {
 		font-size: 36px;
 		margin: 0;
+		font-weight: 400;
 		span {
 			text-transform: uppercase;
 			&.color {
@@ -22,10 +28,162 @@
 	}
 }
 
+.navbar-set {
+	display: flex;
+	justify-content: space-between;
+	// align-items: end;
+	padding: 25px 0;
+	.navbar-collapse {
+		flex-basis: auto;
+	}
+	.navbar-toggler {
+		// display: block;
+		// margin-left: auto;
+		padding: 9px 10px;
+		cursor: pointer;
+		border: 1px solid;
+		background: transparent;
+		.icon-bar {
+			background: #000;
+		    display: block;
+		    width: 22px;
+		    height: 2px;
+		    margin-top: 4px;
+		    border-radius: 1px;
+		}
+		.icon-bar:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+.navigation-list {
+	li {
+		padding: 10px;
+		a {
+			text-transform: uppercase;
+			color: @body-color;
+			.transition();
+			&:hover {
+				text-decoration: none;
+				color: @main-color;
+			}
+		}
+	}
+}
+
+.block-fix_center {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: calc(~'100vh - 200px');
+}
+
 .form-communication {
 	max-width: 468px;
 	width: 100%;
-	padding: 20px;
+	padding: 25px;
 	background: @white;
 	margin-left: auto;
+	border-radius: 5px;
+	.form-title {
+		font-size: 18px;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.form-control {
+		padding: 14px 10px;
+	}
+	.form-check {
+		font-size: 18px;
+		text-align: center;
+		margin: 20px 0;
+	}
+	.btn {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.block-quest {
+	padding-top: 100px;
+	.title-name {
+		padding-top: 30px;
+	}
+	.change {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 30px 0;
+		min-height: 184px;
+		.text {
+			flex-basis: 50%;
+			font-size: 18px;
+			span {
+				color: @main-color;
+				text-transform: uppercase;
+			}
+		}
+		.circle {
+			display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    align-items: center;
+		    position: relative;
+		    width: 150px;
+		    height: 150px;
+		    border: 1px solid;
+		    border-radius: 50%;
+		    p {
+		    	display: flex;
+		    	flex-direction: column;
+		    	align-items: center;
+		    	font-size: 18px;
+		    	margin: 0;
+		    }
+		    span {
+	    		font-size: 48px;
+	    		&.sign {
+	    			font-size: 78px;
+	    		}
+	    	}
+		}
+	}
+}
+
+.programm {
+	background: url("img/fon-2.jpg") no-repeat;
+	background-size: cover;
+	padding: 60px 0;
+	.title-name {
+		text-align: center;
+		padding-bottom: 50px;
+		.color {
+			text-transform: capitalize;
+		}
+	}
+	.course {
+		background: @white;
+		margin-bottom: 15px;
+		.img-fluid {
+			width: 100%;
+		}
+		.name-course {
+			font-size: 24px;
+			padding: 10px 30px;
+		}
+		.list-course {
+			// list-style-type: none;
+			padding-left: 48px;
+			margin: 0;
+			li {
+				// padding-left: 30px;
+				margin-bottom: 10px;
+				font-size: 16px;
+			}
+		}
+		.btn {
+			margin: 10px 30px;
+		}
+	}
 }
