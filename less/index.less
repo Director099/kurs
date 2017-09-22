@@ -30,15 +30,12 @@
 
 .navbar-set {
 	display: flex;
-	justify-content: space-between;
-	// align-items: end;
+	justify-content: space-between !important;
 	padding: 25px 0;
 	.navbar-collapse {
 		flex-basis: auto;
 	}
 	.navbar-toggler {
-		// display: block;
-		// margin-left: auto;
 		padding: 9px 10px;
 		cursor: pointer;
 		border: 1px solid;
@@ -185,5 +182,138 @@
 		.btn {
 			margin: 10px 30px;
 		}
+	}
+}
+
+.contact {
+	padding: 60px 0;
+	.box:hover {
+		.circle {
+			background: #019da8;
+		}
+		.circles::after,
+		.circles::before {
+			transform: scale(0);
+		}
+	}
+	.circles {
+		position: relative;
+		width: 150px;
+		height: 110px;
+		margin-bottom: 20px;
+		margin-left: auto;
+		margin-right: auto;
+		.circle {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -40px;
+			margin-left: -40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			z-index: 999;
+			width: 80px;
+			height: 80px;
+			border-radius: 50%;
+			background: @circle-center;
+			transition: 450ms;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			background: @circle-bottom;
+			transition: 450ms;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 50%;
+			width: 80px;
+			height: 80px;
+			background: @circle-top;
+			transition: 450ms;
+		}
+	}
+
+	.option-text {
+		font-size: 18px;
+		// padding-bottom: 20px;
+		margin-bottom: 0;
+		.tree-dots {
+		    display: block;
+		    font-size: 60px;
+		    line-height: 0;
+		    margin: 0px 0 30px;
+		    color: @black;
+		}
+	}
+
+	.info {
+		font-size: 30px;
+		font-weight: 400;
+		color: @main-color;
+	}
+}
+
+.faq {
+	padding: 60px 0;
+	background: #ecebeb;
+	.title-name {
+		text-align: center;
+	}
+
+	.panel-group {
+		.panel {
+			background: #fff;
+			padding: 7px 50px;
+			margin-bottom: 15px;
+			border: 1px solid #c9c9c9;
+			.transition();
+			&:hover {
+				border: 1px solid #00b9c6;
+				box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+				.panel-title a {
+					color: @main-color;
+				}
+			}
+			.panel-title {
+				margin-bottom: 0;
+				a {
+					font-size: 18px;
+					color: @body-color;
+					font-weight: 300;
+					.transition();
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			.text {
+				padding: 10px 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.questions {
+		display: flex;
+		justify-content: flex-end;
+	    align-items: center;
+	    margin-top: 40px;
+	    p {
+	    	margin-bottom: 0;
+	    	margin-right: 20px;
+	    }
 	}
 }
