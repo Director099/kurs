@@ -6,22 +6,50 @@
 	<title>Kurs</title>
 	<!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon"> -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.min.css">
 </head>
 <body>
+	<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+	    <div class="modal-dialog dialog-set">
+		    <div class="modal-content text-center">
+			    <div class="modal-header">
+			        <h4 class="modal-title">Оставить заявку</h4>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			            <span aria-hidden="true">&times;</span>
+			        </button>
+			    </div>
+			    <div class="modal-body">
+			        <form class="footer-form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Ваше имя">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="E-mail">
+						</div>
+						<div class="form-group">
+							<input type="number" class="form-control" placeholder="Телефон">
+						</div>
+						<button class="btn">Отправить</button>
+					</form>
+			    </div>
+		    </div>
+		</div>
+	</div>
 	<header class="main-header">
 		<div class="container container-set-lg">
 			<div class="menu-top">
-				<a class="logo" href="#">
-					<img class="img-fluid" src="img/webarium black.png" alt="Webarium">
-				</a>
-				<nav class="navbar">
+				<nav class="navbar-expand-md navbar-set">
+					<a class="logo" href="#">
+						<img class="img-fluid order-sm-1" src="img/webarium black.png" alt="Webarium">
+					</a>
+					<button class="btn order-md-2 order-lg-3" data-toggle="modal" data-target=".bd-example-modal-sm">Заказать звонок</button>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					    <span class="navbar-toggler-icon"></span>
+						<span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav">
+					<div class="collapse navbar-collapse order-md-3 order-lg-2" id="navbarNav">
+						<ul class="navbar-nav navigation-list">
 							<li><a href="#">почему мы?</a></li>
 							<li><a href="#">а я смогу?</a></li>
 							<li><a href="#">программа</a></li>
@@ -30,7 +58,6 @@
 						</ul>
 					</div>
 				</nav>
-				<button class="btn">Заказать звонок</button>
 			</div>
 			<div class="block-fix_center">
 				<div class="greed-between">
@@ -39,12 +66,12 @@
 						<p>Мы научим!<br> <span class="transform-text">первое занятие</span> - <span class="color">бесплатно</span>!</p>
 					</section>
 					<form class="form-communication">
-						<h3 class="">Мы научим!</h3>
+						<h3 class="form-title">Мы научим!</h3>
 						<div class="form-group">
-							<input class="form-control" type="text" placeholder="Имя">
+							<input class="form-control" type="text" placeholder="Имя" required>
 						</div>
 						<div class="form-group">
-							<input class="form-control" type="number" placeholder="Телефон">
+							<input class="form-control" type="number" placeholder="Телефон" required>
 						</div>
 						<div class="form-check">
 						    <label class="form-check-label">
@@ -58,62 +85,302 @@
 		</div>
 	</header>
 	<section class="container container-set-lg">
-		<div class="row">
-			<section class="col">
+		<div class="row block-quest">
+			<section class="col-md-6 col-lg-4">
 				<h3 class="title-name">Почему <span>мы</span>?</h3>
 				<div class="change">
-					<p>На рынке сайтов</p>
+					<p class="text">На рынке сайтов</p>
 					<div class="circle">
-						<img src="" alt="Иконка">
+						<p>более<span>5</span>лет</p>
 					</div>
 				</div>
 				<div class="change">
-					<p>Мы реализовали с нуля более 150 проектов</p>
+					<p class="text">Мы реализовали с нуля более 150 проектов</p>
 					<div class="circle">
-						<img src="" alt="Иконка">
+						<span>150</span>
 					</div>
 				</div>
 				<div class="change">
-					<p>В и - бизнесе</p>
+					<p class="text">Мы в бизнесе</p>
 					<div class="circle">
-						<img src="" alt="Иконка">
+						<p>более<span>15</span>лет</p>
 					</div>
 				</div>
 			</section>
-			<div class="col">
+			<div class="col-lg-4 center-block">
 				<img class="img-fluid" src="img/phone.jpg" alt="Мобильные устройства">
 			</div>
-			<section class="col">
-				<h3 class="title-name">А я <span>смогу</span>?</h3>
+			<section class="col-md-6 col-lg-4">
+				<h3 class="title-name title-name_right">А я <span>смогу</span>?</h3>
 				<div class="change">
-					<p>Если вы можете включать компьютер, создавать файлы и писать текст, то у Вас обязательно <span class="color">получиться</span>!</p>
+					<p class="text">Если вы можете включать компьютер, создавать файлы и писать текст, то у Вас обязательно <span class="color">получиться</span>!</p>
 					<div class="circle">
-						<img src="" alt="Иконка">
+						<img class="img-fluid" src="img/icon/icon-1.png" alt="Иконка">
 					</div>
 				</div>
 				<div class="change">
-					<p>Если после курса у вас не получится сделать сайт - мы <span class="color">вернем</span> вам деньги!</p>
+					<p class="text">Если после курса у вас не получится сделать сайт - мы <span class="color">вернем</span> вам деньги!</p>
 					<div class="circle">
-						<img src="" alt="Иконка">
+						<img class="img-fluid" src="img/icon/icon-2.png" alt="Иконка">
 					</div>
 				</div>
 				<div class="change">
-					<p>Первое занятие <span class="color">бесплатное</span>!</p>
+					<p class="text">Первое занятие <span class="color">бесплатное</span>!</p>
 					<div class="circle">
-						<img src="" alt="Иконка">
+						<span class="sign">!</span>
 					</div>
 				</div>
 			</section>
 		</div>
-		<h2><span class="color">Мы</span> постоянно развиваемся! </h2>
+		<h2 class="title-name title-name_affermation"><span class="color">Мы</span> постоянно развиваемся! </h2>
 	</section>
-	<section>
-		
+	<section class="programm">
+		<div class="container container-set-lg">
+			<h2 class="title-name"><span class="color">Программа </span>курса</h2>
+			<div class="row">
+				<div class="col-sm-6 col-md-4 col-xl-3">
+					<section class="course">
+						<img class="img-fluid" src="img/pic-2.jpg" alt="Курс">
+						<h3 class="name-course">Базовый</h3>
+						<ul class="list-course">
+							<li>Введение</li>
+							<li>Разметка</li>
+							<li>Фотошоп</li>
+							<li>Доступность</li>
+							<li>Введение в CSS</li>
+							<li>Сетки</li>
+							<li>Декоративные элементы</li>
+							<li>Оформление контента</li>
+							<li>Введение в JavaScript</li>
+						</ul>
+						<a href="#" class="btn">Запись</a>
+					</section>
+				</div>
+				<div class="col-sm-6 col-md-4 col-xl-3">
+					<section class="course">
+						<img class="img-fluid" src="img/pic-2.jpg" alt="Курс">
+						<h3 class="name-course">Продвинутый</h3>
+						<ul class="list-course">
+							<li>Введение</li>
+							<li>Разметка</li>
+							<li>Фотошоп</li>
+							<li>Доступность</li>
+							<li>Введение в CSS</li>
+							<li>Сетки</li>
+							<li>Декоративные элементы</li>
+							<li>Оформление контента</li>
+							<li>Введение в JavaScript</li>
+						</ul>
+						<a href="#" class="btn">Запись</a>
+					</section>
+				</div>
+				<div class="col-sm-6 col-md-4 col-xl-3">
+					<section class="course">
+						<img class="img-fluid" src="img/pic-3.jpg" alt="Курс">
+						<h3 class="name-course">SEO база</h3>
+						<ul class="list-course">
+							<li>Введение</li>
+							<li>Разметка</li>
+							<li>Фотошоп</li>
+							<li>Доступность</li>
+							<li>Введение в CSS</li>
+							<li>Сетки</li>
+							<li>Декоративные элементы</li>
+							<li>Оформление контента</li>
+							<li>Введение в JavaScript</li>
+						</ul>
+						<a href="#" class="btn">Запись</a>
+					</section>
+				</div>
+				<div class="col-sm-6 col-md-4 col-xl-3">
+					<section class="course">
+						<img class="img-fluid" src="img/pic-4.jpg" alt="Курс">
+						<h3 class="name-course">Продвинутый</h3>
+						<ul class="list-course">
+							<li>Введение</li>
+							<li>Разметка</li>
+							<li>Фотошоп</li>
+							<li>Доступность</li>
+							<li>Введение в CSS</li>
+							<li>Сетки</li>
+							<li>Декоративные элементы</li>
+							<li>Оформление контента</li>
+							<li>Введение в JavaScript</li>
+						</ul>
+						<a href="#" class="btn">Запись</a>
+					</section>
+				</div>
+			</div>
+		</div>
 	</section>
-	<footer></footer>
-	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/jquery-migrate/jquery-migrate.min.js"></script>
-	<script src="bower_components/popper.js/dist/umd/popper.min.js"></script>
-	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<section class="contact">
+		<div class="container container-set-lg">
+			<div class="row text-center">
+				<div class="col box">
+					<div class="circles">
+						<div class="circle">
+							<img src="img/icon/contact-icon.png" alt="Иконки">
+						</div>
+					</div>
+					<p class="option-text">Напишите нам на почту <span class="tree-dots">...</span></p>
+					<a class="info" href="#">lalala@webarium.com</a>
+				</div>
+				<div class="col box">
+					<div class="circles">
+						<div class="circle">
+							<img src="img/icon/phone-icon.png" alt="Иконки">
+						</div>
+					</div>
+					<p class="option-text">Позвоните нам на номер <span class="tree-dots">...</span></p>
+					<a class="info" href="#">8 (987) 258 10 00</a>
+				</div>
+				<div class="col box">
+					<div class="circles">
+						<div class="circle">
+							<img src="img/icon/support-icon.png" alt="Иконки">
+						</div>
+					</div>
+					<p class="option-text">Свяжитесь с нами в Skype <span class="tree-dots">...</span></p>
+					<a class="info" href="#">webariumochka</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="faq">
+		<div class="container container-set-lg">
+			<h2 class="title-name"><span class="color">FAQ</span></h2>
+			<div class="row">
+				<div class="col">
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-1" aria-expanded="true" aria-controls="col-1">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								<p class="text">
+									Нет! Ты будешь настоящим программистом
+								</p>
+							</div>
+						</div>
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-2" aria-expanded="true" aria-controls="col-2">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
+								</p>
+							</div>
+						</div>
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-3" aria-expanded="true" aria-controls="col-3">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
+								</p>
+							</div>
+						</div>
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-4" aria-expanded="true" aria-controls="col-4">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-5" aria-expanded="true" aria-controls="col-5">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
+								</p>
+							</div>
+						</div>
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-6" aria-expanded="true" aria-controls="col-6">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
+								</p>
+							</div>
+						</div>
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-7" aria-expanded="true" aria-controls="col-7">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
+								</p>
+							</div>
+						</div>
+						<div class="panel">
+							<h4 class="panel-title">
+						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-8" aria-expanded="true" aria-controls="col-8">
+						            Я буду настоящим мальчиком ?
+						        </a>
+						    </h4>
+							<div id="col-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+								<p class="text">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="questions">
+				<p>Есть еще вопросы?</p>
+				<button class="btn">Задать вопрос</button>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container container-set-lg">
+			<div class="menu-top">
+				<div class="navbar-expand-md navbar-set">
+					<a class="logo" href="#">
+						<img class="img-fluid order-sm-1" src="img/webarium black.png" alt="Webarium">
+					</a>
+					<button class="btn order-md-2 order-lg-3" data-toggle="modal" data-target=".bd-example-modal-sm">Заказать звонок</button>
+					<ul class="navbar-nav navigation-list">
+						<li><a href="#">почему мы?</a></li>
+						<li><a href="#">а я смогу?</a></li>
+						<li><a href="#">программа</a></li>
+						<li><a href="#">как учиться</a></li>
+						<li><a href="#">контакты</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+	<script src="js/custom.js"></script>
 </body>
 </html>
