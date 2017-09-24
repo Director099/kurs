@@ -9,6 +9,12 @@
 	<link rel="stylesheet" href="style.min.css">
 </head>
 <body>
+	<svg style="display: none;">
+		</symbol>
+		<symbol id="monitor" viewBox="0 0 471 471"><path d="M443.5 86.676h-416a5 5 0 0 0-5 5v253.493a5 5 0 0 0 5 5h416a5 5 0 0 0 5-5V91.676a5 5 0 0 0-5-5zm-5 253.493h-406V96.676h406v243.493z"/><path d="M449.055 64.176H21.946C9.845 64.176 0 74.021 0 86.121v264.602c0 12.101 9.845 21.945 21.946 21.945h148.343l-7.91 19.156h-31.772a7.5 7.5 0 0 0 0 15h209.79c4.143 0 7.5-3.358 7.5-7.5s-3.357-7.5-7.5-7.5h-31.772l-7.911-19.156h148.343c12.101 0 21.945-9.845 21.945-21.945V86.121c-.002-12.1-9.846-21.945-21.947-21.945zM292.394 391.825H178.606l7.911-19.156h97.967l7.91 19.156zM456 350.724a6.952 6.952 0 0 1-6.945 6.945H21.946c-3.83 0-6.946-3.116-6.946-6.945V86.121a6.954 6.954 0 0 1 6.946-6.946h427.109A6.953 6.953 0 0 1 456 86.121v264.603z"/>
+		</symbol>
+		<symbol id="mouse" viewBox="0 0 401.396 401.396"><path d="M200.698 0c-68.997 0-125.13 56.133-125.13 125.129v151.137c0 68.997 56.133 125.129 125.13 125.129s125.129-56.133 125.129-125.129V125.129C325.827 56.133 269.695 0 200.698 0zm110.129 125.129v1.973c-32.303 16.982-68.429 26.282-105.133 27.057v-41.835c10.585-2.298 18.539-11.734 18.539-22.997V57.96c0-11.263-7.954-20.699-18.539-22.997V15.118c58.416 2.622 105.133 50.961 105.133 110.011zM200.698 44.424c7.463 0 13.536 6.072 13.536 13.536v31.368c0 7.463-6.072 13.536-13.536 13.536s-13.536-6.072-13.536-13.536V57.96c0-7.463 6.073-13.536 13.536-13.536zm-5.003-29.305v19.846c-10.581 2.301-18.532 11.735-18.532 22.995v31.368c0 11.26 7.951 20.694 18.532 22.995v41.837c-36.699-.775-72.823-10.076-105.126-27.059v-1.971c-.001-59.049 46.714-107.386 105.126-110.011zm5.003 371.277c-60.726 0-110.13-49.404-110.13-110.129V138.339c34.015 16.958 71.851 25.88 110.126 25.88 38.28 0 76.118-8.921 110.133-25.878v137.925c0 60.726-49.403 110.13-110.129 110.13z"/></symbol>
+	</svg>
 	<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 	    <div class="modal-dialog dialog-set">
 		    <div class="modal-content text-center">
@@ -42,7 +48,7 @@
 					<a class="logo" href="#">
 						<img class="img-fluid order-sm-1" src="img/webarium black.png" alt="Webarium">
 					</a>
-					<button class="btn order-md-2 order-lg-3" data-toggle="modal" data-target=".bd-example-modal-sm">Заказать звонок</button>
+					<button class="btn order-md-2 order-lg-3 hidden-xs" data-toggle="modal" data-target=".bd-example-modal-sm">Заказать звонок</button>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
@@ -62,7 +68,7 @@
 			<div class="block-fix_center">
 				<div class="greed-between">
 					<section class="main-text">
-						<h2 class="title-name">Вы хотите научиться делать <span>сайты</span>?</h2>
+						<h2 class="title-name">Вы хотите научиться делать <span class="color">сайты</span>?</h2>
 						<p>Мы научим!<br> <span class="transform-text">первое занятие</span> - <span class="color">бесплатно</span>!</p>
 					</section>
 					<form class="form-communication">
@@ -87,7 +93,7 @@
 	<section class="container container-set-lg">
 		<div class="row block-quest">
 			<section class="col-md-6 col-lg-4">
-				<h3 class="title-name">Почему <span>мы</span>?</h3>
+				<h3 class="title-name">Почему <span class="color">мы</span>?<span class="three-dots three-dots_center">...</span></h3>
 				<div class="change">
 					<p class="text">На рынке сайтов</p>
 					<div class="circle">
@@ -111,17 +117,21 @@
 				<img class="img-fluid" src="img/phone.jpg" alt="Мобильные устройства">
 			</div>
 			<section class="col-md-6 col-lg-4">
-				<h3 class="title-name title-name_right">А я <span>смогу</span>?</h3>
+				<h3 class="title-name title-name_right">А я <span class="color">смогу</span>?<span class="three-dots three-dots_center">...</span></h3>
 				<div class="change">
 					<p class="text">Если вы можете включать компьютер, создавать файлы и писать текст, то у Вас обязательно <span class="color">получиться</span>!</p>
 					<div class="circle">
-						<img class="img-fluid" src="img/icon/icon-1.png" alt="Иконка">
+						<svg class="svg-color" width="80" height="70">
+              <use xlink:href="#monitor"/>
+            </svg>
 					</div>
 				</div>
 				<div class="change">
 					<p class="text">Если после курса у вас не получится сделать сайт - мы <span class="color">вернем</span> вам деньги!</p>
 					<div class="circle">
-						<img class="img-fluid" src="img/icon/icon-2.png" alt="Иконка">
+						<svg class="svg-color" width="60" height="70">
+              <use xlink:href="#mouse"/>
+            </svg>
 					</div>
 				</div>
 				<div class="change">
@@ -136,7 +146,7 @@
 	</section>
 	<section class="programm">
 		<div class="container container-set-lg">
-			<h2 class="title-name"><span class="color">Программа </span>курса</h2>
+			<h2 class="title-name"><span class="color">Программа </span>курса<span class="three-dots">...</span></h2>
 			<div class="row">
 				<div class="col-sm-6 col-md-4 col-xl-3">
 					<section class="course">
@@ -153,7 +163,12 @@
 							<li>Оформление контента</li>
 							<li>Введение в JavaScript</li>
 						</ul>
-						<a href="#" class="btn">Запись</a>
+						<a href="#" class="btn">Буду учиться!</a>
+						<div class="circles">
+							<div class="circle">
+								<span class="number">1</span>
+							</div>
+						</div>
 					</section>
 				</div>
 				<div class="col-sm-6 col-md-4 col-xl-3">
@@ -171,7 +186,12 @@
 							<li>Оформление контента</li>
 							<li>Введение в JavaScript</li>
 						</ul>
-						<a href="#" class="btn">Запись</a>
+						<a href="#" class="btn">Буду учиться!</a>
+						<div class="circles">
+							<div class="circle">
+								<span class="number">2</span>
+							</div>
+						</div>
 					</section>
 				</div>
 				<div class="col-sm-6 col-md-4 col-xl-3">
@@ -189,7 +209,12 @@
 							<li>Оформление контента</li>
 							<li>Введение в JavaScript</li>
 						</ul>
-						<a href="#" class="btn">Запись</a>
+						<a href="#" class="btn">Буду учиться!</a>
+						<div class="circles">
+							<div class="circle">
+								<span class="number">3</span>
+							</div>
+						</div>
 					</section>
 				</div>
 				<div class="col-sm-6 col-md-4 col-xl-3">
@@ -207,7 +232,12 @@
 							<li>Оформление контента</li>
 							<li>Введение в JavaScript</li>
 						</ul>
-						<a href="#" class="btn">Запись</a>
+						<a href="#" class="btn">Буду учиться!</a>
+						<div class="circles">
+							<div class="circle">
+								<span class="number">4</span>
+							</div>
+						</div>
 					</section>
 				</div>
 			</div>
@@ -216,31 +246,31 @@
 	<section class="contact">
 		<div class="container container-set-lg">
 			<div class="row text-center">
-				<div class="col box">
+				<div class="col-md-4 box">
 					<div class="circles">
 						<div class="circle">
 							<img src="img/icon/contact-icon.png" alt="Иконки">
 						</div>
 					</div>
-					<p class="option-text">Напишите нам на почту <span class="tree-dots">...</span></p>
+					<p class="option-text">Напишите нам на почту <span class="three-dots">...</span></p>
 					<a class="info" href="#">lalala@webarium.com</a>
 				</div>
-				<div class="col box">
+				<div class="col-md-4 box">
 					<div class="circles">
 						<div class="circle">
 							<img src="img/icon/phone-icon.png" alt="Иконки">
 						</div>
 					</div>
-					<p class="option-text">Позвоните нам на номер <span class="tree-dots">...</span></p>
+					<p class="option-text">Позвоните нам на номер <span class="three-dots">...</span></p>
 					<a class="info" href="#">8 (987) 258 10 00</a>
 				</div>
-				<div class="col box">
+				<div class="col-md-4 box">
 					<div class="circles">
 						<div class="circle">
 							<img src="img/icon/support-icon.png" alt="Иконки">
 						</div>
 					</div>
-					<p class="option-text">Свяжитесь с нами в Skype <span class="tree-dots">...</span></p>
+					<p class="option-text">Свяжитесь с нами в Skype <span class="three-dots">...</span></p>
 					<a class="info" href="#">webariumochka</a>
 				</div>
 			</div>
@@ -248,16 +278,17 @@
 	</section>
 	<section class="faq">
 		<div class="container container-set-lg">
-			<h2 class="title-name"><span class="color">FAQ</span></h2>
+			<h2 class="title-name"><span class="color">FAQ</span><span class="three-dots">...</span></h2>
 			<div class="row">
-				<div class="col">
+				<div class="col-sm-6">
 					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-1" aria-expanded="true" aria-controls="col-1">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-1" aria-expanded="true" aria-controls="col-1">
+				          Я буду настоящим мальчиком ?
+				        </a>
+						  </h4>
 							<div id="col-1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 								<p class="text">
 									Нет! Ты будешь настоящим программистом
@@ -266,10 +297,11 @@
 						</div>
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-2" aria-expanded="true" aria-controls="col-2">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-2" aria-expanded="true" aria-controls="col-2">
+				            Я буду настоящим мальчиком ?
+				        </a>
+					    </h4>
 							<div id="col-2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 								<p class="text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
@@ -278,10 +310,11 @@
 						</div>
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-3" aria-expanded="true" aria-controls="col-3">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-3" aria-expanded="true" aria-controls="col-3">
+				            Я буду настоящим мальчиком ?
+				        </a>
+					    </h4>
 							<div id="col-3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 								<p class="text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
@@ -290,10 +323,11 @@
 						</div>
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-4" aria-expanded="true" aria-controls="col-4">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#col-4" aria-expanded="true" aria-controls="col-4">
+				            Я буду настоящим мальчиком ?
+				        </a>
+					    </h4>
 							<div id="col-4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
 								<p class="text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
@@ -302,14 +336,15 @@
 						</div>
 					</div>
 				</div>
-				<div class="col">
+				<div class="col-sm-6">
 					<div class="panel-group" id="accordion-2" role="tablist" aria-multiselectable="true">
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-5" aria-expanded="true" aria-controls="col-5">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-5" aria-expanded="true" aria-controls="col-5">
+				            Я буду настоящим мальчиком ?
+				        </a>
+					    </h4>
 							<div id="col-5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 								<p class="text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
@@ -318,10 +353,11 @@
 						</div>
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-6" aria-expanded="true" aria-controls="col-6">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-6" aria-expanded="true" aria-controls="col-6">
+				            Я буду настоящим мальчиком ?
+				        </a>
+					    </h4>
 							<div id="col-6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 								<p class="text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
@@ -330,10 +366,11 @@
 						</div>
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-7" aria-expanded="true" aria-controls="col-7">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-7" aria-expanded="true" aria-controls="col-7">
+				            Я буду настоящим мальчиком ?
+				        </a>
+					    </h4>
 							<div id="col-7" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 								<p class="text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
@@ -342,10 +379,11 @@
 						</div>
 						<div class="panel">
 							<h4 class="panel-title">
-						        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-8" aria-expanded="true" aria-controls="col-8">
-						            Я буду настоящим мальчиком ?
-						        </a>
-						    </h4>
+								<span class="plus"></span>
+				        <a role="button" data-toggle="collapse" data-parent="#accordion-2" href="#col-8" aria-expanded="true" aria-controls="col-8">
+				            Я буду настоящим мальчиком ?
+				        </a>
+						  </h4>
 							<div id="col-8" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 								<p class="text">
 									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ipsum, ex, sit perspiciatis dicta ipsa assumenda adipisci quod, explicabo omnis nam facere dolorem numquam nisi architecto dolores veritatis sint. Illo!
@@ -357,25 +395,25 @@
 			</div>
 			<div class="questions">
 				<p>Есть еще вопросы?</p>
-				<button class="btn">Задать вопрос</button>
+				<button class="btn" data-toggle="modal" data-target=".bd-example-modal-sm">Задать вопрос</button>
 			</div>
 		</div>
 	</section>
 	<footer>
 		<div class="container container-set-lg">
-			<div class="menu-top">
+			<div class="menu-bottom">
 				<div class="navbar-expand-md navbar-set">
-					<a class="logo" href="#">
-						<img class="img-fluid order-sm-1" src="img/webarium black.png" alt="Webarium">
+					<a class="logo order-sm-2 order-lg-1" href="#">
+						<img class="img-fluid" src="img/webarium black.png" alt="Webarium">
 					</a>
-					<button class="btn order-md-2 order-lg-3" data-toggle="modal" data-target=".bd-example-modal-sm">Заказать звонок</button>
-					<ul class="navbar-nav navigation-list">
+					<ul class="navbar-nav navigation-list order-sm-1 order-lg-2">
 						<li><a href="#">почему мы?</a></li>
 						<li><a href="#">а я смогу?</a></li>
 						<li><a href="#">программа</a></li>
 						<li><a href="#">как учиться</a></li>
 						<li><a href="#">контакты</a></li>
 					</ul>
+					<button class="btn order-sm-3 order-lg-3" data-toggle="modal" data-target=".bd-example-modal-sm">Заказать звонок</button>
 				</div>
 			</div>
 		</div>
