@@ -1,5 +1,5 @@
 body {
-	font: 300 14px "Roboto", "Arial", sans-serif;
+	font: 400 14px "Open Sans", "Arial", sans-serif;
 	color: @body-color;
 }
 
@@ -8,16 +8,27 @@ a:hover {
 }
 
 .main-header {
-	height: 100vh;
+	min-height: 100vh;
 	background: #ecebeb url("img/desk-bottom.png") no-repeat bottom;
 	background-size: contain;
 }
 
 .title-name {
-	font: 36px "Roboto", "Arial", sans-serif;
-	span {
+	font: 36px "Open Sans", "Arial", sans-serif;
+	.color {
 		text-transform: uppercase;
 		color: @main-color;
+	}
+	.three-dots {
+	   	display: block;
+	    font-size: 50px;
+	    line-height: 0;
+      margin: 0 0px 25px;
+	    color: #000;
+      letter-spacing: 5px;
+      &.three-dots_center {
+      	margin: 0 73px 25px;
+      }
 	}
 	&.title-name_affermation {
 		text-align: center;
@@ -35,9 +46,11 @@ a:hover {
 	max-width: 174px;
 	width: 100%;
 	cursor: pointer;
+	text-transform: uppercase;
+	font-size: 14px;
 	&:hover {
 		color: @white;
-		background: #0698a2;
+		background: @hover-dark;
 	}
 }
 

@@ -4626,23 +4626,34 @@ a.text-dark:hover {
   visibility: hidden !important;
 }
 body {
-  font: 300 14px "Roboto", "Arial", sans-serif;
+  font: 400 14px "Open Sans", "Arial", sans-serif;
   color: #4d4a40;
 }
 a:hover {
   text-decoration: none;
 }
 .main-header {
-  height: 100vh;
+  min-height: 100vh;
   background: #ecebeb url("img/desk-bottom.png") no-repeat bottom;
   background-size: contain;
 }
 .title-name {
-  font: 36px "Roboto", "Arial", sans-serif;
+  font: 36px "Open Sans", "Arial", sans-serif;
 }
-.title-name span {
+.title-name .color {
   text-transform: uppercase;
   color: #00b9c6;
+}
+.title-name .three-dots {
+  display: block;
+  font-size: 50px;
+  line-height: 0;
+  margin: 0 0px 25px;
+  color: #000;
+  letter-spacing: 5px;
+}
+.title-name .three-dots.three-dots_center {
+  margin: 0 73px 25px;
 }
 .title-name.title-name_affermation {
   text-align: center;
@@ -4658,6 +4669,8 @@ a:hover {
   max-width: 174px;
   width: 100%;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
 }
 .btn:hover {
   color: #fff;
@@ -4676,6 +4689,7 @@ a:hover {
       justify-content: space-between;
   -ms-flex-align: center;
       align-items: center;
+  margin-bottom: 10px;
 }
 .main-text {
   max-width: 656px;
@@ -4699,6 +4713,8 @@ a:hover {
   display: flex;
   -ms-flex-pack: justify !important;
       justify-content: space-between !important;
+  -ms-flex-align: start;
+      align-items: flex-start;
   padding: 25px 0;
 }
 .navbar-set .navbar-collapse {
@@ -4783,6 +4799,19 @@ a:hover {
       align-items: center;
   margin: 30px 0;
   min-height: 184px;
+  transition: 250ms;
+}
+.block-quest .change:hover .circle {
+  border: 1px solid #00b9c6;
+}
+.block-quest .change:hover .circle .svg-color {
+  fill: #00b9c6;
+}
+.block-quest .change:hover .circle span {
+  color: #00b9c6;
+}
+.block-quest .change:hover .circle p {
+  color: #00b9c6;
 }
 .block-quest .change .text {
   -ms-flex-preferred-size: 50%;
@@ -4807,6 +4836,10 @@ a:hover {
   height: 150px;
   border: 1px solid;
   border-radius: 50%;
+  transition: 250ms;
+}
+.block-quest .change .circle .svg-color {
+  transition: 250ms;
 }
 .block-quest .change .circle p {
   display: -ms-flexbox;
@@ -4817,16 +4850,18 @@ a:hover {
       align-items: center;
   font-size: 18px;
   margin: 0;
+  line-height: 35px;
+  transition: 250ms;
 }
 .block-quest .change .circle span {
+  transition: 250ms;
   font-size: 48px;
 }
 .block-quest .change .circle span.sign {
   font-size: 78px;
 }
 .programm {
-  background: url("img/fon-2.jpg") no-repeat;
-  background-size: cover;
+  background: #ecebeb;
   padding: 60px 0;
 }
 .programm .title-name {
@@ -4837,8 +4872,22 @@ a:hover {
   text-transform: capitalize;
 }
 .programm .course {
+  position: relative;
   background: #fff;
   margin-bottom: 15px;
+  border: 1px solid #ecebeb;
+  transition: 250ms;
+}
+.programm .course:hover {
+  border: 1px solid #00b9c6;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+}
+.programm .course:hover .circles .circle {
+  background: #0698a2;
+}
+.programm .course:hover .circles::after,
+.programm .course:hover .circles::before {
+  transform: scale(0);
 }
 .programm .course .img-fluid {
   width: 100%;
@@ -4855,6 +4904,60 @@ a:hover {
   margin-bottom: 10px;
   font-size: 16px;
 }
+.programm .course .circles {
+  position: absolute;
+  left: -25px;
+  top: -42px;
+  width: 115px;
+  height: 85px;
+}
+.programm .course .circles .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -32.5px;
+  margin-left: -32.5px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background: #00dfef;
+  transition: 450ms;
+  z-index: 9;
+}
+.programm .course .circles .circle .number {
+  font-size: 36px;
+  color: #fff;
+}
+.programm .course .circles::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  background: #efefef;
+  transition: 450ms;
+}
+.programm .course .circles::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  background: #d9fdff;
+  transition: 450ms;
+}
 .programm .course .btn {
   margin: 10px 30px;
 }
@@ -4862,11 +4965,14 @@ a:hover {
   padding: 60px 0;
 }
 .contact .box:hover .circle {
-  background: #019da8;
+  background: #0698a2;
 }
 .contact .box:hover .circles::after,
 .contact .box:hover .circles::before {
   transform: scale(0);
+}
+.contact .box:hover .info {
+  color: #0698a2;
 }
 .contact .circles {
   position: relative;
@@ -4923,17 +5029,19 @@ a:hover {
   font-size: 18px;
   margin-bottom: 0;
 }
-.contact .option-text .tree-dots {
+.contact .option-text .three-dots {
   display: block;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 0;
-  margin: 0px 0 30px;
+  margin: 0px 0 25px;
   color: #000;
+  letter-spacing: 5px;
 }
 .contact .info {
   font-size: 30px;
   font-weight: 400;
   color: #00b9c6;
+  transition: 250ms;
 }
 .faq {
   padding: 60px 0;
@@ -4941,10 +5049,11 @@ a:hover {
 }
 .faq .title-name {
   text-align: center;
+  padding-bottom: 50px;
 }
 .faq .panel-group .panel {
   background: #fff;
-  padding: 7px 50px;
+  padding: 11px 50px;
   margin-bottom: 15px;
   border: 1px solid #c9c9c9;
   transition: 250ms;
@@ -4957,12 +5066,44 @@ a:hover {
   color: #00b9c6;
 }
 .faq .panel-group .panel .panel-title {
+  position: relative;
   margin-bottom: 0;
+  font-size: 0;
+}
+.faq .panel-group .panel .panel-title .plus {
+  position: absolute;
+  left: -30px;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  transition: 250ms;
+}
+.faq .panel-group .panel .panel-title .plus::after,
+.faq .panel-group .panel .panel-title .plus::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 3px;
+  background: #00b9c6;
+}
+.faq .panel-group .panel .panel-title .plus::after {
+  top: 50%;
+  margin-top: -1.5px;
+}
+.faq .panel-group .panel .panel-title .plus::before {
+  top: 6px;
+  transform: rotate(-90deg);
+}
+.faq .panel-group .panel .panel-title.active .plus::before {
+  top: 6px;
+  transform: rotate(0deg);
 }
 .faq .panel-group .panel .panel-title a {
+  vertical-align: middle;
   font-size: 18px;
   color: #4d4a40;
-  font-weight: 300;
+  font-weight: 400;
   transition: 250ms;
 }
 .faq .panel-group .panel .panel-title a:hover {
@@ -7654,6 +7795,9 @@ a:hover {
     padding-right: 0;
     padding-left: 0;
   }
+  .title-name .three-dots.three-dots_center {
+    margin: 0 73px 40px;
+  }
   .navbar-set {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -7713,6 +7857,22 @@ a:hover {
   .block-quest .center-block {
     display: none;
   }
+  .contact .box {
+    margin-bottom: 20px;
+  }
+  .contact .box .info {
+    font-size: 22px;
+  }
+  footer .navigation-list {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+  footer .navigation-list li {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 @media (max-width: 575px) {
   .navbar-expand-sm > .container,
@@ -7720,8 +7880,27 @@ a:hover {
     padding-right: 0;
     padding-left: 0;
   }
-  .navbar-set .btn {
+  .navbar-set .hidden-xs {
     display: none;
+  }
+  .faq .questions {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  .faq .questions p {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+  footer .navbar-set {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  footer .navbar-set img {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -7750,6 +7929,9 @@ a:hover {
   }
   .main-text p {
     font-size: 28px;
+  }
+  footer .navigation-list {
+    display: none;
   }
 }
 @media (max-width: 1199px) {
